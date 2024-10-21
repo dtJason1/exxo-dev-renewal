@@ -18,8 +18,16 @@ function Header() {
     console.log("hello");
   };  
   return (
-    <div className='header'>
+    <div className='header div3'>
       <button className='img-button'><img src={image_1} className='logobutton' alt="my image" onClick={myFunction} /></button>
+      <div className='div3' >
+        <button class='img-button anotherbutton'>BRAND</button>
+        <button className='img-button anotherbutton'>SKIN</button>
+        <button className='img-button anotherbutton'>HAIR</button>
+        <button className='img-button anotherbutton'>B/A</button>
+        <button className='img-button anotherbutton'>CONTACT</button>
+
+      </div>
     </div>
   );
 }
