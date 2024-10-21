@@ -1,8 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Avenir";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +8,35 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@font-face {
+  font-family: "Avenir";
+  font-weight: 800;
+  src: url("./fonts/Avenir-Heavy.ttf") format("truetype");
+}
+
+
+@font-face {
+  font-family: "Avenir";
+  font-weight: 500;
+  src: url("./fonts/Avenir-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Avenir";
+  font-weight: 400;
+  src: url("./fonts/Avenir-Roman.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Avenir";
+  font-weight: 350;
+  src: url("./fonts/Avenir-Book.ttf") format("truetype");
+}
+
+
+@font-face {
+  font-family: "Avenir";
+  font-weight: 300;
+  src: url("./fonts/Avenir-Light.ttf") format("truetype");
 }
