@@ -1,4 +1,5 @@
 .App {
+  overflow: hidden;
   text-align: center;
 }
 
@@ -20,13 +21,17 @@
   color: white;
 }
 
+
 .App-link {
   color: #61dafb;
 }
 
+.home{
+  width: 100%;
+  height: 100%;
+}
 
-
-.home {
+section{
   margin: 0;
   width: 100vw;
   height: 100vh;
@@ -41,7 +46,7 @@
 
 .header {
 
-  background-color: transparent;
+  background-color: var(--white, #FFF);
   position: fixed;
   width: 100vw;
   height: auto;
@@ -52,7 +57,7 @@
   border: none; /* Remove default button border */
   padding: 0; /* Remove default button padding */
   cursor: pointer; /* Change cursor to pointer for a clickable button */
-  font-family: 'Avenir';
+  font-family: 'Pretendard';
 
 }
 
@@ -82,14 +87,15 @@
 
 .div3{
   margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 h1{
-  color: var(--Black, var(--Black, #000));
-  font-family: Avenir;
+  color: var(--white, #FFF);
+  font-family: Pretendard;
   font-size: 60px;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 800;
   line-height: normal;
   margin: 0;
   animation: smoothAppear 1s ease-in;
@@ -97,7 +103,7 @@ h1{
 
 .h1grey{
 
-  color: var(--Gray, #646464);
+  color: var(--white, #FFF);
 }
 
 .h1black{
@@ -106,10 +112,10 @@ h1{
 
 p{
   margin: 0;
-  color: var(--Gray, #646464);
-  font-family: Avenir;
+  color: var(--white, #FFF);
+  font-family: Pretendard;
   font-size: 24px;
-  font-weight: 350;
+  font-weight: 800;
   line-height: normal;  
 }
 
@@ -135,4 +141,18 @@ p{
   font-size: 5rem;
   color: red;
   transition: 1.5s;
+}
+
+
+/* 초기 상태: 숨겨진 상태 */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(+15%);
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out; /* 부드러운 전환 */
+}
+
+/* 뷰포트에 보일 때 트리거되는 클래스 */
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0); /* 원래 위치로 이동 */
 }
