@@ -156,3 +156,24 @@ p{
   opacity: 1;
   transform: translateY(0); /* 원래 위치로 이동 */
 }
+
+.animate-on-header-opacity{
+  opacity: 1;
+  transition: opacity 1.2s ease-out
+}
+
+.animate-on-header-opacity.invisible{
+  opacity:0;
+}
+
+
+
+.gifdivbox{
+  width: 450px;
+  height:450px;
+}
+
+.section_1{
+  background-color: var(--Gray, #646464);
+
+}
