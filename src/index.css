@@ -22,8 +22,22 @@ code {
   src: url("./fonts/Pretendard-Bold.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "MinervaModern";
+  font-weight: 800;
+  src: url("./fonts/fonnts.com-MinervaModern_Black.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "MinervaModern";
+  font-weight: 450;
+  src: url("./fonts/fonnts.com-MinervaModern_Bold.otf") format("truetype");
+}
 
 
 
-
-
+@font-face {
+  font-family: "MinervaModern";
+  font-weight: 400;
+  src: url("./fonts/fonnts.com-MinervaModern_Regular.otf") format("truetype");
+}

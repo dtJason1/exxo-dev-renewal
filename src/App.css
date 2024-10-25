@@ -157,13 +157,17 @@ p{
   transform: translateY(0); /* 원래 위치로 이동 */
 }
 
-.animate-on-header-opacity{
+
+
+.animate-on-header-opacity.visible{
   opacity: 1;
   transition: opacity 1.2s ease-out
 }
 
 .animate-on-header-opacity.invisible{
   opacity:0;
+  transition: opacity 1.2s ease-out
+
 }
 
 
