@@ -42,14 +42,24 @@ section{
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
 
+
+}
+.section_1_image{
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
 .header {
 
   background-color: var(--white, #FFF);
   position: fixed;
   width: 100vw;
   height: auto;
+  z-index: 999;
 }
 
 .img-button {
@@ -69,11 +79,19 @@ section{
 }
 
 .anotherbutton{
+  font-family: "MinervaModern";
   margin-left: 30px;
   margin-right: 30px;
   font-weight: 800;
   font-size: 24px;
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 32px; /* 133.333% */
+  letter-spacing: 0.24px;
 }
+
 
 .div1{
   text-align: start;
@@ -86,8 +104,13 @@ section{
 }
 
 .div3{
+  margin-left: 15px;
   margin-top: 30px;
   margin-bottom: 30px;
+}
+
+.div_3_padding{
+  margin-left: 42px;
 }
 
 h1{
@@ -158,26 +181,125 @@ p{
 }
 
 
-
-.animate-on-header-opacity.visible{
+.animate-on-header-opacity {
   opacity: 1;
-  transition: opacity 1.2s ease-out
+  height: auto;
+  transition: opacity 0.4s ease-out; /* 초기에는 opacity만 트랜지션 적용 */
+  overflow: hidden;
 }
 
-.animate-on-header-opacity.invisible{
-  opacity:0;
-  transition: opacity 1.2s ease-out
-
+.animate-on-header-opacity.invisible {
+  opacity: 0;
+  transition: opacity 0.4s ease-out; /* opacity만 트랜지션 */
 }
 
+.animate-on-header-opacity.height-zero {
+  margin: 0; /* height가 줄어드는 상태 */
+  height: 0;
+  display: none;
 
-
+  transition: margin 1s ease-in-out, height 1s ease-in-out; /* height 트랜지션을 따로 설정 */
+}
+.animate-on-header-opacity.height-zero.disply-none {
+  display: none;
+}
 .gifdivbox{
   width: 450px;
   height:450px;
 }
 
 .section_1{
-  background-color: var(--Gray, #646464);
+  background-color: var(--Gray, #E4E4E2);
+
+}
+
+.section_header{
+  font-family: "MinervaModern";
+  font-size: 46px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.46px
+}
+
+.section_header.anotherheader{
+  color: var(--Gray, #646464);
+
+  font-size: 36px;
+  font-weight: 450;
+  letter-spacing: -0.36px;
+
+}
+
+.section_header.content{
+  color: var(--Gray, #646464);
+  text-align: center;
+  font-family: 'Pretendard';
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px; /* 177.778% */
+  letter-spacing: -0.18px;
+}
+
+.section_1_wrapper{
+  padding-top: 134px;
+  
+
+}
+
+.section_1_div_header{
+  display: flex;
+  place-content:center;
+}
+
+.section_1_header{
+  color: var(--Gray, #646464);
+  font-family: MinervaModern;
+  font-size: 46px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: normal;
+  letter-spacing: -0.46px;
+}
+.section_1_header.another{
+  font-weight: 400;
+}
+
+.padding{
+  width: 20px;
+}
+
+.section_1_content{
+  margin-top: 50px;
+  display: flex;
+  width: 90%;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.section_1_content_first{
+  width: 50%;
+
+}
+
+
+.section_1_content_second{
+  display: flex;
+  flex-direction: column;
+  margin-left: 3vh;
+}
+.section_1_content_anothersecond{
+  display: flex;
+}
+.section_1_imagecover{
+  background-color: var(--Medium-Gray, #D9D9D9);
+  width:315px;
+  height: 512px;
+}
+
+.div4{
+  margin-top:40px;
+  margin-bottom: 40px;
 
 }

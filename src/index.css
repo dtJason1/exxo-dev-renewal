@@ -21,7 +21,11 @@ code {
   font-weight: 800;
   src: url("./fonts/Pretendard-Bold.ttf") format("truetype");
 }
-
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 400;
+  src: url("./fonts/Pretendard-Regular.ttf") format("truetype");
+}
 @font-face {
   font-family: "MinervaModern";
   font-weight: 800;
