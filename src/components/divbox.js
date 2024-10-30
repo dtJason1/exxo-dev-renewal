@@ -1,5 +1,7 @@
 import { useEffect, useRef } from 'react';
-
+import image_1 from '../image/section_4_1.png';
+import image_2 from "../image/section_4_2.png";
+import { useSequentialAnimation } from '../hooks/useSequentialAnimation.ts';
 function DivBox() {
   const divRef = useRef(); // TypeScript: Ref for the div element
 
@@ -41,4 +43,62 @@ function DivBox() {
   );
 }
 
+// MoonBox Component
+function MoonBox({ onAnimationEnd }) {
+  const titles = ["LAMININ", "HYALURONAN", "PROCOLLAGEN", "FIBRONECTIN"];
+  const divRefs = useSequentialAnimation(titles, 200);
+
+  useEffect(() => {
+    if (divRefs.current.length === titles.length) {
+      const lastElement = divRefs.current[titles.length - 1];
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) onAnimationEnd();
+        },
+        { threshold: 1.0 }
+      );
+      observer.observe(lastElement);
+
+      return () => observer.unobserve(lastElement);
+    }
+  }, [onAnimationEnd, titles.length, divRefs]);
+
+  return (
+    <div className="section_4_wrapper">
+      {titles.map((title, index) => (
+        <div
+          key={index}
+          ref={(el) => (divRefs.current[index] = el)}
+          className="section_4_redmoon"
+        >
+          <img src={image_1} alt={title} />
+          <h1 className="section_4_redmoontext">{title}</h1>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function MoonBox2() {
+  const titles = ["TGF-B", "SDF-1", "VEGF", "HGF", "BEGF", "EGF"];
+  const divRefs = useSequentialAnimation(titles, 200);
+
+  return (
+    <div className="section_4_wrapper">
+      {titles.map((title, index) => (
+        <div
+          key={index}
+          ref={(el) => (divRefs.current[index] = el)}
+          className="section_4_redmoon"
+        >
+          <img src={image_2} alt={title} />
+          <h1 className="section_4_redmoontext">{title}</h1>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+
 export default DivBox;
+export { MoonBox, MoonBox2 };

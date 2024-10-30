@@ -1,0 +1,80 @@
+
+.header {
+    background-color: var(--white, #FFF);
+    position: fixed;
+    width: 100vw;
+    height: auto;
+    z-index: 999;
+}
+
+  
+.img-button {
+    z-index: 99;
+    background-color: transparent; /* Remove default button background */
+    border: none; /* Remove default button border */
+    padding: 0; /* Remove default button padding */
+    cursor: pointer; /* Change cursor to pointer for a clickable button */
+    font-family: 'Pretendard';
+  }
+  
+.logobutton {
+    width: auto; /* Adjust the width as needed */
+    height: 77px; /* Maintain aspect ratio */
+    display: block; /* Ensures the image behaves like a block element */
+    object-fit: cover; /* Ensures the image fits the button area, without distortion */
+}
+  
+.anotherbutton{
+    font-family: "MinervaModern";
+    margin-left: 30px;
+    margin-right: 30px;
+    font-weight: 800;
+    font-size: 24px;
+    text-align: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 32px; /* 133.333% */
+    letter-spacing: 0.24px;
+    z-index: 9999;
+}
+
+.div3{
+    margin-left: 15px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  
+.div_3_padding{
+    margin-left: 42px;
+}
+
+
+.headerdiv{
+    border: none;
+    margin-top: 30px;
+    height: 77px;
+    opacity:  1;
+}
+
+.headerdiv.invisible {
+    opacity: 0;
+    transition: opacity 0.7s linear;
+}
+.headerdiv.visible {
+    opacity: 1;
+    transition: opacity 0.7s linear;
+}
+
+.headerdiv.reduceheight{
+    height: 0;
+    margin-top: 0;
+    
+    transition: height 0.7s ease-out, margin-top 0.7s ease-out, opacity 0.7s ease-in;
+}
+.headerdiv.induceheight{
+    height: 77px;
+    margin-top: 30px;
+    
+    transition: height 0.7s ease-out, margin-top 0.7s ease-out, opacity 0.7s ease-in;
+}
