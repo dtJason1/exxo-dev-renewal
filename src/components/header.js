@@ -1,18 +1,20 @@
 import '../header.css';
 import image_1 from '../image/logo.png';
 import React, { useEffect, useRef, useState } from 'react';
+import { useScrollHandler } from '../hooks/useScrollHandler.ts';
 
 function Header() {
   const [isVisible, setIsVisible] = useState(true);
   const [isFadeOut, setIsFadeOut] = useState(false);
   const [isHeightReduce, setIsHeightReduce] = useState(false);
   const headerDivRef = useRef(null);
+
+  const { setIndexAndScroll } = useScrollHandler();
+
   function greetUser(scrollAmount) {
-    window.scrollTo({
-      top: scrollAmount,
-      left: 0,
-      behavior: 'smooth',
-    });  }
+    const newIndex = Math.floor(scrollAmount / window.innerHeight);
+    setIndexAndScroll(newIndex);
+  }
   // 두 번째 섹션(Sector_1)을 관찰
   useEffect(() => {
     const observer = new IntersectionObserver(

@@ -8,6 +8,7 @@ import Sector_3 from './components/sector_3.tsx';
 import Sector_4 from './components/sector_4.tsx';
 import Sector_5 from './components/sector_5.tsx';
 import Sector_6 from './components/sector_6.tsx';
+import Sector_7 from './components/sector_7.tsx';
 
 import GifTest from './components/components';
 import { useState, useRef, useCallback, useEffect } from 'react';
@@ -53,6 +54,7 @@ function App() {
       <Sector_4></Sector_4>
       <Sector_5></Sector_5>
       <Sector_6></Sector_6>
+      <Sector_7></Sector_7>
 
     </div>
   );

@@ -1,41 +1,41 @@
-import { useCallback, useEffect, useRef } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
-export function useScrollHandler(onScrollEnd?: () => void ,onScrollToPosition?: (index: number) => void) {
-  const scrollInProgress = useRef(false); // 스크롤 중 여부 관리
-  const scrollPositions = useRef([0, window.innerHeight, window.innerHeight * 2, window.innerHeight * 3, window.innerHeight * 4, window.innerHeight * 5, window.innerHeight * 6]); // 특정 위치 배열
-  const currentIndex = useRef(0); // 현재 위치 인덱스
+export function useScrollHandler() {
+  const [scrollInProgress, setScrollInProgress] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [scrollPositions, setScrollPositions] = useState<number[]>([]); // 배열 타입을 number[]로 지정
+
+  useEffect(() => {
+    const calculateScrollPositions = () => 
+      Array.from({ length: 8 }, (_, index) => window.innerHeight * index);
+    setScrollPositions(calculateScrollPositions());
+  }, []);
+
+  const setIndexAndScroll = useCallback((index: number) => {
+    setScrollInProgress(true);
+    setCurrentIndex(index);
+    window.scrollTo({
+      top: scrollPositions[index],
+      left: 0,
+      behavior: 'smooth',
+    });
+    setTimeout(() => {
+      setScrollInProgress(false);
+    }, 1500);
+  }, [scrollPositions]);
 
   const handleWindowWheel = useCallback(
     (event: WheelEvent) => {
-      event.preventDefault(); // 기본 스크롤 방지
+      event.preventDefault();
+      if (scrollInProgress) return;
 
-      if (scrollInProgress.current) return; // 스크롤 중이면 무시
-      scrollInProgress.current = true; // 스크롤 시작
-
-      // 스크롤 방향에 따라 다음 위치 인덱스 설정
-      if (event.deltaY > 0 && currentIndex.current < scrollPositions.current.length - 1) {
-        currentIndex.current += 1;
-      } else if (event.deltaY < 0 && currentIndex.current > 0) {
-        currentIndex.current -= 1;
+      if (event.deltaY > 0 && currentIndex < scrollPositions.length - 1) {
+        setIndexAndScroll(currentIndex + 1);
+      } else if (event.deltaY < 0 && currentIndex > 0) {
+        setIndexAndScroll(currentIndex - 1);
       }
-
-      const scrollAmount = scrollPositions.current[currentIndex.current];
-
-      window.scrollTo({
-        top: scrollAmount,
-        left: 0,
-        behavior: 'smooth',
-      });
-
-      if (onScrollToPosition && (currentIndex.current === 0 || currentIndex.current === 1)) {
-        onScrollToPosition(currentIndex.current);
-      }
-      // 스크롤 완료 후 콜백 실행
-      setTimeout(() => {
-        scrollInProgress.current = false;
-      }, 1500);
     },
-    [onScrollEnd]
+    [scrollInProgress, currentIndex, setIndexAndScroll]
   );
 
   useEffect(() => {
@@ -46,11 +46,5 @@ export function useScrollHandler(onScrollEnd?: () => void ,onScrollToPosition?: 
     };
   }, [handleWindowWheel]);
 
-  useEffect(() => {
-    const handleResize = () => {
-      scrollPositions.current = [0, window.innerHeight, window.innerHeight * 2, window.innerHeight * 3, window.innerHeight * 4, window.innerHeight * 5, window.innerHeight * 6];
-    };
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  return { setIndexAndScroll };
 }

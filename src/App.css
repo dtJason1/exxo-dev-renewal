@@ -181,7 +181,12 @@ p{
   line-height: normal;
   letter-spacing: -0.46px
 }
+.section_header.section_7{
+  color: var(--Gray, #646464);
 
+  font-size: 96px;
+
+}
 .section_header.anotherheader{
   color: var(--Gray, #646464);
 
@@ -229,7 +234,17 @@ p{
   line-height: 32px; /* 177.778% */
   letter-spacing: -0.18px;
 }
-
+.section_header.content.last{
+  position: absolute;
+  color: var(--white, #FFF);
+  font-family: MinervaModern;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: normal;
+  letter-spacing: -0.36px;
+  text-decoration-line: underline
+}
 .section_1_wrapper{
   padding-top: 134px;
   height: 100%;
@@ -470,7 +485,8 @@ p{
 
 .sliderDiv{
   width: 36vw;
-
+  margin-left:7vw;
+  margin-right:7vw;
 
 }
 
@@ -492,4 +508,119 @@ p{
   margin-top: 10vh;
 
 
+}
+
+.carousel-container {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  animation: slide 20s infinite linear;
+}
+
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-200vw);
+  }
+}
+
+.div7{
+  height: 40vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.div7_wrapper{
+  margin-top: 50%;
+
+}
+
+.div7.contactpage{
+  display: flex;
+  flex-direction: column; 
+  margin-left: 5vw;
+  justify-content: normal;
+
+  align-items: normal;
+
+}
+
+.div7.contactpage.wrapper{
+  display: flex;
+  flex-direction: row; 
+  margin-top: 10vh;
+  margin-left: 10vw;
+  justify-content: normal;
+
+  align-items: normal;
+
+}
+
+.contactText{
+  text-align: start;
+  color: var(--Gray, #646464);
+  font-family: Barlow;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px; 
+}
+
+.contactText.contentbutton{
+  color: var(--white, #FFF);
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+.contact{
+  width: 20vw;
+  height: 40px;
+  background-color: #D9D9D9;
+  border: none;
+}
+
+.contact.contents{
+  height: 130px;
+
+}
+
+.label{
+  min-width: 8vw
+}
+
+.div8{
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+
+}
+.div8.contents{
+  align-items: start;
+}
+.div8.contentsbutton{
+  justify-content: end;
+}
+
+.div9{
+  display: flex;
+
+}
+
+.contactButton{
+  width: 130px;
+  height: 50px;
+  background-color: #091B37;
+  margin-top: 10px;
+  cursor: pointer;
 }

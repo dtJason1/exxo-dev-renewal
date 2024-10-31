@@ -45,3 +45,9 @@ code {
   font-weight: 400;
   src: url("./fonts/fonnts.com-MinervaModern_Regular.otf") format("truetype");
 }
+
+@font-face {
+  font-family: "Barlow";
+  font-weight: 400;
+  src: url("./fonts/Barlow-Regular.ttf") format("truetype");
+}

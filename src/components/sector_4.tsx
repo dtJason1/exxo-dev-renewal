@@ -11,7 +11,7 @@ import { SectionHeaderLightFirstDivBox,P1DivBOX } from './headerdiv.js';
 function Sector_4({ onLogoClick }: { onLogoClick: () => void }) {
   const [isMoonBox1Complete, setIsMoonBox1Complete] = useState(false);
 
-  useScrollHandler(onLogoClick); // 스크롤 완료 후 콜백으로 onLogoClick 실행
+  // useScrollHandler(onLogoClick); // 스크롤 완료 후 콜백으로 onLogoClick 실행
   return (
     <section id="section" className="section_1 pink">
       <div className="section_1_wrapper">

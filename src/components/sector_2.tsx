@@ -22,7 +22,7 @@ function AnotherDiVBox({ param, param2 }) {
 
 
 function Sector_2() {
-  useScrollHandler(); // 스크롤 완료 후 콜백으로 onLogoClick 실행
+  //useScrollHandler(); // 스크롤 완료 후 콜백으로 onLogoClick 실행
 
   return (
     <section id="section" className="section_1">

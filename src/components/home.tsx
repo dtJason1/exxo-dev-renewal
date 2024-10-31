@@ -5,7 +5,7 @@ import DivBox from './divbox';
 import { useScrollHandler } from '../hooks/useScrollHandler.ts';
 
 function Home({ onLogoClick }: { onLogoClick: () => void }) {
-  useScrollHandler(onLogoClick); // 스크롤 완
+  //useScrollHandler(onLogoClick); // 스크롤 완
 
   return (
     <section id="section">

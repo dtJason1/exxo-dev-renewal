@@ -7,7 +7,7 @@ import { SectionHeaderLightFirstDivBox,P1DivBOX } from './headerdiv.js';
 import { useScrollHandler } from '../hooks/useScrollHandler.ts';
 
 function Sector_5({ onLogoClick }: { onLogoClick: () => void }) {
-  useScrollHandler(onLogoClick); // 스크롤 완료 후 콜백으로 onLogoClick 실행
+  // useScrollHandler(onLogoClick); // 스크롤 완료 후 콜백으로 onLogoClick 실행
 
   return (
     <section id="section" className="section_1">
