@@ -14,7 +14,7 @@ function Sector_5({ onLogoClick }: { onLogoClick: () => void }) {
         <div className='section_3_wrapper'>
           <div className='section_3_wrapper'>
           <div className='section_5_bordercon'>
-            <img className="section_3_image section_5" src={image_1} alt="home" />
+            <img className="section_3_image section_5 plus" src={image_1} alt="home" />
             </div>
             <div className='section_1_div_header section_5 '>
               <div className='section_1_div_header anothersection3'>

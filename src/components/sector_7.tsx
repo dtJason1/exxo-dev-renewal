@@ -25,8 +25,17 @@ function Sector_7({ onLogoClick }: { onLogoClick: () => void }) {
 
           </div>
       </div>
+      <div className='footerclass'>
+        <div>
+          <P1DivBOX delay={1000} className='section_header content start' param={"306, Gasan digital 1-ro 19, Geumcheon-gu, Seoul, 08594, South Korea"}></P1DivBOX>
+          <P1DivBOX delay={1000} className='section_header content start' param={"TEL   |   +82 33-747-4465-6   FAX   |   +82 -33-747-1133   E-MAIL   |   sales@daeyangmed.com"}></P1DivBOX>
+
+        </div>
+        <P1DivBOX delay={1000} className='section_header content start' param={"©2023 Daeyang Medical Co., Ltd. ALL RIGHTS RESERVED"}></P1DivBOX>
+
+      </div>
       <div className="section_1_wrapper">
-      
+
 
       </div>
     </section>

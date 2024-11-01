@@ -134,7 +134,7 @@ function Contact({ param, delay}) {
           />
         </div>      
       </div>
-      <div className='div7 contactpage'>
+      <div className='div7 contactpage another'>
         <div className='div8'>
           <div className='label'>
             <h1 ref={divRef} className="contactText">E-MAIL</h1>

@@ -71,7 +71,7 @@ function MoonBox({ onAnimationEnd }) {
           ref={(el) => (divRefs.current[index] = el)}
           className="section_4_redmoon"
         >
-          <img src={image_1} alt={title} />
+          <img className='section_4_redmoon_image' src={image_1} alt={title} />
           <h1 className="section_4_redmoontext">{title}</h1>
         </div>
       ))}
@@ -91,7 +91,7 @@ function MoonBox2() {
           ref={(el) => (divRefs.current[index] = el)}
           className="section_4_redmoon"
         >
-          <img src={image_2} alt={title} />
+          <img  className='section_4_redmoon_image' src={image_2} alt={title} />
           <h1 className="section_4_redmoontext">{title}</h1>
         </div>
       ))}

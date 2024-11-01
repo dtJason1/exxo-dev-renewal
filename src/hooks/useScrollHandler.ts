@@ -46,5 +46,14 @@ export function useScrollHandler() {
     };
   }, [handleWindowWheel]);
 
+  useEffect(() => {
+    const handleResize = () => {
+      const calculateScrollPositions = () => 
+        Array.from({ length: 8 }, (_, index) => window.innerHeight * index);
+      setScrollPositions(calculateScrollPositions());    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return { setIndexAndScroll };
 }

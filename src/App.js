@@ -49,6 +49,7 @@ function App() {
       <div ref={sectorRef}  >
         <Sector_1 onLogoClick={() => null} />
       </div>
+      
       <Sector_2></Sector_2>
       <Sector_3></Sector_3>
       <Sector_4></Sector_4>

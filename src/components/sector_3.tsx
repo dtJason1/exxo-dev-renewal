@@ -12,7 +12,7 @@ function Sector_3({ onLogoClick }: { onLogoClick: () => void }) {
     <section id="section" className="section_1">
       <div className="section_1_wrapper">
 
-        <SectionHeaderLightFirstDivBox delay={500} param2 ="WHAT" param="BLESSKIN EXXO"> </SectionHeaderLightFirstDivBox>
+        <SectionHeaderLightFirstDivBox delay={500} param2 ="WHAT" param="BLESSKIN EXXO?"> </SectionHeaderLightFirstDivBox>
 
         <div className='section_3_wrapper'>
           <div className='section_3_wrapper another'>

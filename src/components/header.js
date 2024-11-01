@@ -3,7 +3,7 @@ import image_1 from '../image/logo.png';
 import React, { useEffect, useRef, useState } from 'react';
 import { useScrollHandler } from '../hooks/useScrollHandler.ts';
 
-function Header() {
+  function Header() {
   const [isVisible, setIsVisible] = useState(true);
   const [isFadeOut, setIsFadeOut] = useState(false);
   const [isHeightReduce, setIsHeightReduce] = useState(false);
@@ -58,7 +58,7 @@ function Header() {
       <div>
         <div className={`headerdiv ${!isFadeOut ? 'invisible' : 'visible'} ${!isHeightReduce ? 'reduceheight':'induceheight'}`}>
         <button
-        onClick={() => greetUser(window.innerHeight)}
+        onClick={() => greetUser(window.innerHeight*6)}
         className={'img-button'}
         id="logo"
       >
@@ -71,8 +71,8 @@ function Header() {
         </div>
         <div className="div3 div_3_padding">
           <button className="img-button anotherbutton" onClick={() => greetUser(0)}>BRAND</button>
-          <button className="img-button anotherbutton"onClick={() => greetUser(window.innerHeight)}>B/A</button>
-          <button className="img-button anotherbutton"onClick={() => greetUser(window.innerHeight*5)}>CONTACT</button>
+          <button className="img-button anotherbutton"onClick={() => greetUser(window.innerHeight*6)}>B/A</button>
+          <button className="img-button anotherbutton"onClick={() => greetUser(window.innerHeight*7)}>CONTACT</button>
         </div>
       </div>
 

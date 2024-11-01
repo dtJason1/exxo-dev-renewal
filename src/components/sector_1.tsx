@@ -32,9 +32,9 @@ function Sector_1({ onLogoClick }: { onLogoClick: () => void }) {
                   <h1 className='section_header anotherheader'>SKIN SET</h1>
 
                 </div>
-                <P1DivBOX delay={500} className='section_header content' param={"Strengthens The Skin Barrier"}></P1DivBOX>
-                <P1DivBOX delay={500} className='section_header content' param={"Promotes Collagen Synthesis"}></P1DivBOX>
-                <P1DivBOX delay={500} className='section_header content' param={"Promotes Skin Regeneration"}></P1DivBOX>
+                <P1DivBOX delay={500} className='section_header content section_1' param={"Strengthens The Skin Barrier"}></P1DivBOX>
+                <P1DivBOX delay={500} className='section_header content section_1' param={"Promotes Collagen Synthesis"}></P1DivBOX>
+                <P1DivBOX delay={500} className='section_header content section_1' param={"Promotes Skin Regeneration"}></P1DivBOX>
                
 
               </div>
@@ -51,9 +51,9 @@ function Sector_1({ onLogoClick }: { onLogoClick: () => void }) {
                   <h1 className='section_header anotherheader'>HAIR SET</h1>
 
                 </div>
-                <P1DivBOX delay={500} className='section_header content' param={"Stimulates Hair Growth"}></P1DivBOX>
-                <P1DivBOX delay={500} className='section_header content' param={"Protect Hair Folicie"}></P1DivBOX>
-                <P1DivBOX delay={500} className='section_header content' param={"Enhancing Hair Density"}></P1DivBOX>
+                <P1DivBOX delay={500} className='section_header content section_1' param={"Stimulates Hair Growth"}></P1DivBOX>
+                <P1DivBOX delay={500} className='section_header content section_1' param={"Protect Hair Folicie"}></P1DivBOX>
+                <P1DivBOX delay={500} className='section_header content section_1' param={"Enhancing Hair Density"}></P1DivBOX>
 
                 {/* <h1 className='section_header content'>Stimulates Hair Growth</h1>
                 <h1 className='section_header content'>Protect Hair Folicie</h1>

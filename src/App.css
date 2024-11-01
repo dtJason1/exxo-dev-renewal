@@ -30,6 +30,8 @@
 }
 
 
+
+
 .App-link {
   color: #61dafb;
 }
@@ -217,6 +219,8 @@ p{
   transition: opacity 1.2s ease-out, transform 1.2s ease-out; /* 부드러운 전환 */
 
 }
+
+
 .section_header.content.visible{
 
   opacity: 1;
@@ -252,6 +256,12 @@ p{
 }
 
 .section_1_div_header{
+  display: flex;
+  place-content:center;
+  margin-bottom: 5vh;
+}
+
+.section_1_div_header.section_1{
   display: flex;
   place-content:center;
   margin-bottom: 5vh;
@@ -306,7 +316,7 @@ p{
 }
 
 .section_1_content{
-  margin-top: 50px;
+  margin-top: 40px;
   display: flex;
   width: 90%;
   height: 100%;
@@ -335,7 +345,7 @@ p{
 
 .div4{
   margin-top:6vh;
-  margin-bottom: 6vh;
+  margin-bottom: 4vh;
 
 }
 
@@ -360,7 +370,7 @@ p{
 
 .section_2_videowrapper{
   display: flex;
-  width: 50vw;
+  width: 54vw;
 
 }
 
@@ -584,7 +594,7 @@ p{
   text-align: center;
 }
 .contact{
-  width: 20vw;
+  min-width: 15vw;
   height: 40px;
   background-color: #D9D9D9;
   border: none;
@@ -623,4 +633,132 @@ p{
   background-color: #091B37;
   margin-top: 10px;
   cursor: pointer;
+}
+
+.div7.contactpage.another{
+  margin-right: 10vw;
+}
+
+.section_4_redmoon_image{
+  width: normal;
+}
+
+.footerclass{
+  display: flex;
+  width: 85%;
+  justify-content: space-between;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+@media(max-width: 1400px){
+  h1{
+    font-size: 40px;
+  }
+  p{
+    font-size: 20px;
+  }
+
+  .div2{
+    padding-top: 4vh;
+  }
+  .div4{
+    margin-top:3vh;
+    margin-bottom: 3vh;
+  }
+
+  .section_header.content.start{
+    font-size: 15px;
+    line-height: normal;
+
+  }
+
+  .section_header.anotherheader{
+    font-size: 24px;
+  }
+
+  .padding{
+    width: 15px;
+  }
+
+  .section_1_header{
+    font-size: 32px;
+  }
+  .section_header.content{
+    font-size: 15px;
+    line-height: normal;
+
+  }
+  .section_header.content.section_1{
+    font-size: 12px;
+    line-height: 32px;
+
+  }
+  .section_2_explainclass{
+    max-width: 70vw;
+  }
+  .section_2_videowrapper{
+    width: 60vw;
+    height: 50vh;
+  }
+  .section_4_redmoon_image{
+    width: 13vw;
+  }
+  .section_4_redmoontext{
+    font-size: 15px;
+  }
+  .section_3_image.section_5{
+    object-position: center;
+
+  }
+  .section_2_explainclass.section_5{
+    margin-right: 5vw;
+  }
+  .gifdivbox.section_3{
+    width: normal;
+  }
+
+  .section_2_explainclass.section_6 {
+    justify-self: center;
+    max-width: 50vw;
+  }
+  .section_header.anotherheader.section_6 {
+    font-size: 24px;
+  } 
+
+  .sliderDiv_img{
+    width: auto;
+    height: auto;
+      /* width: 18vw; */
+      /* height: 36vh; */
+  }
+  .sliderDiv_img_another{
+    width: auto;
+    height: auto;
+      /* width: 18vw; */
+      /* height: 36vh; */
+  }
+  .div7.contactpage.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: normal;
+    align-items: flex-start;
+}
+.contact {
+  width: 30vw;
+
+}
+
+.contact.contents {
+  height: 85px;
+}
+
+
+}
+
+
+@media(max-width: 1000px){
+
+ 
+
+
 }
