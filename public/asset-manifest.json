@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/static/css/main.570fddfc.css",
+    "main.js": "/static/js/main.c8ca4c83.js",
+    "static/js/453.bc117a8a.chunk.js": "/static/js/453.bc117a8a.chunk.js",
+    "static/media/exxo-skin.gif": "/static/media/exxo-skin.f289a8d1fddf51f39483.gif",
+    "static/media/exxo-hair.gif": "/static/media/exxo-hair.b3989c79e5ac8b875e4a.gif",
+    "static/media/section_1_1.jpg": "/static/media/section_1_1.f2cbae2dac10bf83e60a.jpg",
+    "static/media/section_5_1.png": "/static/media/section_5_1.5734bc071174fa9c7d2f.png",
+    "static/media/Pretendard-Regular.ttf": "/static/media/Pretendard-Regular.fbe5b096111efa3e3bc2.ttf",
+    "static/media/Pretendard-Bold.ttf": "/static/media/Pretendard-Bold.be4e300c014733a8521f.ttf",
+    "static/media/section_2_1.png": "/static/media/section_2_1.2b68b94d914bb83a24de.png",
+    "static/media/section_7.png": "/static/media/section_7.3659861feb1e7a8a2c5e.png",
+    "static/media/image_1.jpg": "/static/media/image_1.2e02b7af6258122e0bf8.jpg",
+    "static/media/section_6_2.png": "/static/media/section_6_2.861290508c6f7bfe0b6e.png",
+    "static/media/section_6_1.png": "/static/media/section_6_1.ee14baf794aa35d37af2.png",
+    "static/media/section_6_4.png": "/static/media/section_6_4.1c2e5fd93909c417a4f8.png",
+    "static/media/section_6_3.png": "/static/media/section_6_3.e79bb991ed8ffc5d6f55.png",
+    "static/media/Barlow-Regular.ttf": "/static/media/Barlow-Regular.e7eb634d040a6f384033.ttf",
+    "static/media/section_1_2.png": "/static/media/section_1_2.860a70456c4a4282e027.png",
+    "static/media/section_1_3.png": "/static/media/section_1_3.d691c255c15c7d0a5177.png",
+    "static/media/section_4_1.png": "/static/media/section_4_1.b75c286a196ac449a2c2.png",
+    "static/media/fonnts.com-MinervaModern_Black.otf": "/static/media/fonnts.com-MinervaModern_Black.dfcc2958f56783fc7557.otf",
+    "static/media/fonnts.com-MinervaModern_Bold.otf": "/static/media/fonnts.com-MinervaModern_Bold.a276099fe402a1529b7e.otf",
+    "static/media/section_4_2.png": "/static/media/section_4_2.e0dce28e4eb8defa5092.png",
+    "static/media/fonnts.com-MinervaModern_Regular.otf": "/static/media/fonnts.com-MinervaModern_Regular.61044deefcff4d93ab1f.otf",
+    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/index.html",
+    "main.570fddfc.css.map": "/static/css/main.570fddfc.css.map",
+    "main.c8ca4c83.js.map": "/static/js/main.c8ca4c83.js.map",
+    "453.bc117a8a.chunk.js.map": "/static/js/453.bc117a8a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.570fddfc.css",
+    "static/js/main.c8ca4c83.js"
+  ]
+}

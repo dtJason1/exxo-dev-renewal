@@ -27,7 +27,7 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "homepage": "https://dtJason1.github.io/exxo-dev-renewal"
+    "homepage": "https://dtJason1.github.io/exxo-dev-renewal/"
 
 
   },
