@@ -33,16 +33,30 @@ import { useScrollHandler } from '../hooks/useScrollHandler.ts';
   }, []);
 
   useEffect(() => {
-    if (!isVisible) {
-      // opacity 애니메이션부터 시작
-      setIsFadeOut(false);
-      const fadeTimeout = setTimeout(() => {
-        setIsHeightReduce(false); // height와 margin 애니메이션 시작
-      }, 600); // opacity 애니메이션 후 약간의 딜레이 후에 height와 margin 시작
-  
-      return () => clearTimeout(fadeTimeout);
-    } else {
-      // visible 상태로 돌아올 때는 height와 margin 먼저 복구
+
+    if(window.innerWidth > 800){
+
+      if (!isVisible) {
+        // opacity 애니메이션부터 시작
+        setIsFadeOut(false);
+        const fadeTimeout = setTimeout(() => {
+          setIsHeightReduce(false); // height와 margin 애니메이션 시작
+        }, 600); // opacity 애니메이션 후 약간의 딜레이 후에 height와 margin 시작
+    
+        return () => clearTimeout(fadeTimeout);
+      } else {
+        // visible 상태로 돌아올 때는 height와 margin 먼저 복구
+        setIsHeightReduce(true);
+        const heightTimeout = setTimeout(() => {
+          setIsFadeOut(true); // opacity 복구
+        }, 600); // height와 margin 복구 후 약간의 딜레이 후에 opacity 복구
+    
+        return () => clearTimeout(heightTimeout);
+      }
+
+    }
+    else{
+
       setIsHeightReduce(true);
       const heightTimeout = setTimeout(() => {
         setIsFadeOut(true); // opacity 복구
@@ -50,10 +64,15 @@ import { useScrollHandler } from '../hooks/useScrollHandler.ts';
   
       return () => clearTimeout(heightTimeout);
     }
+
   }, [isVisible]);
 
 // !isFadeOut ? 'visible' : 'fade-out'
   return (
+    <div>
+
+
+
     <div className="header" id="header">
       <div>
         <div className={`headerdiv ${!isFadeOut ? 'invisible' : 'visible'} ${!isHeightReduce ? 'reduceheight':'induceheight'}`}>
@@ -77,6 +96,10 @@ import { useScrollHandler } from '../hooks/useScrollHandler.ts';
       </div>
 
     </div>
+
+
+    </div>
+
   );
 }
 

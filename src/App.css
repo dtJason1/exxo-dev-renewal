@@ -756,9 +756,14 @@ p{
 }
 
 
-@media(max-width: 1000px){
+@media(max-width: 800px){
 
- 
-
+  .home{
+    display: flex;
+    align-items: flex-end;
+  }
+  .div1{
+    margin-bottom: 25vh;
+  }
 
 }

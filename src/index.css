@@ -4,6 +4,8 @@ body {
   font-family: "Pretendard";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: -webkit-fill-available;
+  min-height: 100vh;
 }
 
 ::-webkit-scrollbar {
