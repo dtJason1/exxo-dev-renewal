@@ -21,10 +21,10 @@ function Sector_4({ onLogoClick }: { onLogoClick: () => void }) {
           <div style={{marginTop: "2vh"}} >
 
             <MoonBox onAnimationEnd={() => setIsMoonBox1Complete(true)} />
-            {isMoonBox1Complete && <MoonBox2  />}
+            {<MoonBox2  />}
     
           </div>
-          <div style={{marginBottom: "3vh", marginTop: "3vh"}}>
+          <div className= "section_5_div5">
           <P1DivBOX delay={1000} className='section_header content' param={"A patented effective ingredient containing approximately 270 times more 'Fibronectine', 'Pro-collagen type-l', precursor of collagen, and 'Laminin, a tissue and cell adhesive, compared to conventional culture mediums."}></P1DivBOX>
           </div>
 {/*         

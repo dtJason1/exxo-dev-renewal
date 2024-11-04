@@ -8,10 +8,11 @@ function Home({ onLogoClick }: { onLogoClick: () => void }) {
   //useScrollHandler(onLogoClick); // 스크롤 완
 
   return (
-    <section id="section">
+    <section id="section" style={{height:"100vh"}}>
       <div className="home">
         <DivBox />
         <img className="homeimage" src={image_1} alt="home" />
+
       </div>
     </section>
   );

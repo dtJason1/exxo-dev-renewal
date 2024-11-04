@@ -14,11 +14,11 @@ import { SectionHeaderLightFirstDivBox,P1DivBOX } from './headerdiv.js';
 function Sector_1({ onLogoClick }: { onLogoClick: () => void }) {
   //useScrollHandler(onLogoClick); // 스크롤 완료 후 콜백으로 onLogoClick 실행
   const Desktop = ({ children }) => {
-    const isTablet = useMediaQuery({ minWidth: 900})
+    const isTablet = useMediaQuery({ minWidth: 800})
     return isTablet ? children : null
   }
   const Mobile = ({ children }) => {
-    const isMobile = useMediaQuery({ maxWidth: 899 })
+    const isMobile = useMediaQuery({ maxWidth: 799 })
     return isMobile ? children : null
   }
   return (
@@ -50,7 +50,7 @@ function Sector_1({ onLogoClick }: { onLogoClick: () => void }) {
 
                 </div>
               </div>
-              <div className='section_1_content_second'>
+              <div className='section_1_content_second' >
                 <div className='section_1_imagecover'>
                 <div className='section_1_imagecover'>
                   <img className="section_image none" src={section_1_3} alt="home" />
@@ -100,7 +100,7 @@ function Sector_1({ onLogoClick }: { onLogoClick: () => void }) {
 
                 </div>
               </div>
-              <div className='section_1_content_second'>
+              <div className='section_1_content_second' style={{marginLeft : "3vh"}}>
                 <div className='section_1_imagecover'>
                 <div className='section_1_imagecover'>
                   <img className="section_image none" src={section_1_3} alt="home" />

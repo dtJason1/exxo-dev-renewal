@@ -68,11 +68,9 @@ import { useMediaQuery } from 'react-responsive'
             className="img-button"
             id="logo"
           >
-            <img src={image_1} className="logobutton" alt="Brand logo" />
+            <img src={image_1} className="logobutton mobile" alt="Brand logo" />
           </button>
-          <button className="hamburger-menu" onClick={() => /* handle mobile menu toggle */ null}>
-            안녕하세요
-          </button>
+
         </div>
       ) : (
         // Desktop Layout

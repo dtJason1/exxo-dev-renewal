@@ -3,6 +3,7 @@ import {useScrollAnimation} from '../hooks/useScrollAnimation.ts';
 import { useState } from 'react';
 import axios from "axios";
 import { body } from 'framer-motion/client';
+import { useMediaQuery } from 'react-responsive'
 
 function SectionHeaderHeavyFirstDivBox({ param, param2, delay }) {
     const divRef = useScrollAnimation(delay);
@@ -47,6 +48,16 @@ function P1DivBOX({ param, className, delay}) {
   }
   
 function Contact({ param, delay}) {
+
+  const Desktop = ({ children }) => {
+    const isTablet = useMediaQuery({ minWidth: 800})
+    return isTablet ? children : null
+  }
+  const Mobile = ({ children }) => {
+    const isMobile = useMediaQuery({ maxWidth: 799 })
+    return isMobile ? children : null
+  }
+
   const divRef = useScrollAnimation(delay);
   const [inputs, setInputs] = useState({
     name: "",
@@ -102,7 +113,9 @@ function Contact({ param, delay}) {
     });
   };
   return (
-    <div className='div9'>
+    <div>
+      <Desktop>
+      <div className='div9'>
       <div className='div7 contactpage'>
         <div className='div8'>
           <div className='label'>
@@ -173,6 +186,88 @@ function Contact({ param, delay}) {
           </button>
         </div> 
       </div>
+      <div className='footerclass' style={{display:"flex", flexDirection: "column", marginTop : "2vh"}}>
+            <div style={{marginTop: "2vh"}}>
+              <P1DivBOX delay={1000} className='section_header content start' param={"306, Gasan digital 1-ro 19, Geumcheon-gu, Seoul, 08594, South Korea"}></P1DivBOX>
+              <P1DivBOX delay={1000} className='section_header content start' param={"TEL   |   +82 33-747-4465-6   FAX   |   +82 -33-747-1133   E-MAIL   |   sales@daeyangmed.com"}></P1DivBOX>
+
+            </div>
+            <P1DivBOX delay={1000} className='section_header content start' param={"©2023 Daeyang Medical Co., Ltd. ALL RIGHTS RESERVED"}></P1DivBOX>
+
+          </div>
+    </div>
+
+
+      </Desktop>
+      <Mobile>
+
+      <div className='div9' style={{flexDirection :"column", maxWidth : "90%"}}>
+      <div className='div8'>
+          <div className='label'>
+            <h1 ref={divRef} className="contactText">NAME</h1>
+          </div>
+          <input className='contact'
+            name="name" 
+            onChange={onChange} 
+            value={name} 
+          />
+        </div>
+        <div className='div8'>
+          <div className='label'>
+            <h1 ref={divRef} className="contactText">TEL.</h1>
+          </div>
+          <input className='contact'
+            name="TEL" 
+            onChange={onChange} 
+            value={TEL} 
+          />
+        </div> 
+        <div className='div8'>
+          <div className='label'>
+            <h1 ref={divRef} className="contactText">COMPANY</h1>
+          </div>
+          <input className='contact'
+            name="COMPANY" 
+            onChange={onChange} 
+            value={COMPANY} 
+          />
+        </div>  
+        <div className='div8'>
+          <div className='label'>
+            <h1 ref={divRef} className="contactText">E-MAIL</h1>
+          </div>
+          <input className='contact'
+            name="EMAIL" 
+            onChange={onChange} 
+            value={EMAIL} 
+          />
+        </div>
+        <div className='div8'>
+          <div className='label'>
+            <h1 ref={divRef} className="contactText">COUNTRY</h1>
+          </div>
+          <input className='contact'
+            name="COUNTRY" 
+            onChange={onChange} 
+            value={COUNTRY} 
+          />
+        </div>      
+        <div className='div8 contents'>
+          <div className='label'>
+            <h1 ref={divRef} className="contactText">CONTENTS</h1>
+          </div>
+          <input className='contact contents'
+            name="CONTENTS" 
+            onChange={onChange} 
+            value={CONTENTS} 
+          />
+        </div>    
+        <div className='div8 contentsbutton'>
+          <button onClick={onClick} className='contactButton'>
+            <h1 className="contactText contentbutton">SUBMIT</h1>
+
+          </button>
+        </div> 
       <div className='footerclass'>
             <div>
               <P1DivBOX delay={1000} className='section_header content start' param={"306, Gasan digital 1-ro 19, Geumcheon-gu, Seoul, 08594, South Korea"}></P1DivBOX>
@@ -183,6 +278,13 @@ function Contact({ param, delay}) {
 
           </div>
     </div>
+
+
+
+      </Mobile>
+
+    </div>
+   
 
 
 

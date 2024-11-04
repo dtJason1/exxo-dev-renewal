@@ -34,8 +34,8 @@ function DivBox() {
   return (
     <div className="div1 animate-on-scroll" ref={divRef}>
       <div>
-        <h1>EXXO CERTIFIED</h1>
-        <h1>EXCELLENCE</h1>
+        <h1>HYBRID EXSOME</h1>
+        <h1>BLESKIN EXXO</h1>
       </div>
       <div className="div2">
         <p>Certified by CPNP and FDA, ensuring</p>

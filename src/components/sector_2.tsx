@@ -26,11 +26,11 @@ function Sector_2() {
 
 
   const Desktop = ({ children }) => {
-    const isTablet = useMediaQuery({ minWidth: 900})
+    const isTablet = useMediaQuery({ minWidth: 800    })
     return isTablet ? children : null
   }
   const Mobile = ({ children }) => {
-    const isMobile = useMediaQuery({ maxWidth: 899 })
+    const isMobile = useMediaQuery({ maxWidth: 799 })
     return isMobile ? children : null
   }
   //useScrollHandler(); // 스크롤 완료 후 콜백으로 onLogoClick 실행
@@ -39,7 +39,7 @@ function Sector_2() {
     <div>
     <Desktop>
       <section id="section" className="section_1">
-        <div className="section_1_wrapper">
+        <div className="section_1_wrapper"  style={{display: "flex", flexDirection :"column"}}>
           <AnotherDiVBox param="WHAT" param2="IS BELSKIN EXXO EXOSOME ?" />
 
 
@@ -59,7 +59,7 @@ function Sector_2() {
     </Desktop>
     <Mobile>
       <section id="section" className="section_1">
-        <div className="section_1_wrapper  section_2">
+        <div className="section_1_wrapper  section_2" style={{flexDirection :"column"}}>
           <AnotherDiVBox param="WHAT" param2="IS BELSKIN EXXO EXOSOME ?" />
           <div className='section_2_explainclass'>
               <P1DivBOX delay={500} className='section_header content' param={"Experience a youthful glow with our cutting-edge exosome solutions. Lactobacillus-formula strengthens the skin barrier and promotes regeneration, effectively slowing down the aging process."}></P1DivBOX>
