@@ -2,8 +2,13 @@ import '../header.css';
 import image_1 from '../image/logo.png';
 import React, { useEffect, useRef, useState } from 'react';
 import { useScrollHandler } from '../hooks/useScrollHandler.ts';
+import { useMediaQuery } from 'react-responsive'
 
   function Header() {
+
+
+  const isMobile = useMediaQuery({ maxWidth: 800 });
+
   const [isVisible, setIsVisible] = useState(true);
   const [isFadeOut, setIsFadeOut] = useState(false);
   const [isHeightReduce, setIsHeightReduce] = useState(false);
@@ -33,30 +38,16 @@ import { useScrollHandler } from '../hooks/useScrollHandler.ts';
   }, []);
 
   useEffect(() => {
-
-    if(window.innerWidth > 800){
-
-      if (!isVisible) {
-        // opacity 애니메이션부터 시작
-        setIsFadeOut(false);
-        const fadeTimeout = setTimeout(() => {
-          setIsHeightReduce(false); // height와 margin 애니메이션 시작
-        }, 600); // opacity 애니메이션 후 약간의 딜레이 후에 height와 margin 시작
-    
-        return () => clearTimeout(fadeTimeout);
-      } else {
-        // visible 상태로 돌아올 때는 height와 margin 먼저 복구
-        setIsHeightReduce(true);
-        const heightTimeout = setTimeout(() => {
-          setIsFadeOut(true); // opacity 복구
-        }, 600); // height와 margin 복구 후 약간의 딜레이 후에 opacity 복구
-    
-        return () => clearTimeout(heightTimeout);
-      }
-
-    }
-    else{
-
+    if (!isVisible) {
+      // opacity 애니메이션부터 시작
+      setIsFadeOut(false);
+      const fadeTimeout = setTimeout(() => {
+        setIsHeightReduce(false); // height와 margin 애니메이션 시작
+      }, 600); // opacity 애니메이션 후 약간의 딜레이 후에 height와 margin 시작
+  
+      return () => clearTimeout(fadeTimeout);
+    } else {
+      // visible 상태로 돌아올 때는 height와 margin 먼저 복구
       setIsHeightReduce(true);
       const heightTimeout = setTimeout(() => {
         setIsFadeOut(true); // opacity 복구
@@ -64,42 +55,50 @@ import { useScrollHandler } from '../hooks/useScrollHandler.ts';
   
       return () => clearTimeout(heightTimeout);
     }
-
   }, [isVisible]);
 
 // !isFadeOut ? 'visible' : 'fade-out'
   return (
-    <div>
-
-
-
     <div className="header" id="header">
-      <div>
-        <div className={`headerdiv ${!isFadeOut ? 'invisible' : 'visible'} ${!isHeightReduce ? 'reduceheight':'induceheight'}`}>
-        <button
-        onClick={() => greetUser(window.innerHeight*6)}
-        className={'img-button'}
-        id="logo"
-      >
-        <img
-          src={image_1} // 이미지 경로가 맞는지 확인하세요.
-          className="logobutton"
-          alt="Brand logo"
-        />
-      </button>
+        {isMobile ? (
+        // Mobile Layout
+        <div className="header-mobile">
+          <button
+            onClick={() => greetUser(window.innerHeight * 6)}
+            className="img-button"
+            id="logo"
+          >
+            <img src={image_1} className="logobutton" alt="Brand logo" />
+          </button>
+          <button className="hamburger-menu" onClick={() => /* handle mobile menu toggle */ null}>
+            안녕하세요
+          </button>
         </div>
-        <div className="div3 div_3_padding">
-          <button className="img-button anotherbutton" onClick={() => greetUser(0)}>BRAND</button>
-          <button className="img-button anotherbutton"onClick={() => greetUser(window.innerHeight*6)}>B/A</button>
-          <button className="img-button anotherbutton"onClick={() => greetUser(window.innerHeight*7)}>CONTACT</button>
+      ) : (
+        // Desktop Layout
+        <div>
+          <div
+            className={`headerdiv ${isFadeOut ? 'visible' : 'invisible'} ${
+              isHeightReduce ? 'induceheight' : 'reduceheight'
+            }`}
+          >
+            <button
+              onClick={() => greetUser(window.innerHeight * 6)}
+              className="img-button"
+              id="logo"
+            >
+              <img src={image_1} className="logobutton" alt="Brand logo" />
+            </button>
+          </div>
+          <div className="div3 div_3_padding">
+            <button className="img-button anotherbutton" onClick={() => greetUser(0)}>BRAND</button>
+            <button className="img-button anotherbutton" onClick={() => greetUser(window.innerHeight * 6)}>B/A</button>
+            <button className="img-button anotherbutton" onClick={() => greetUser(window.innerHeight * 7)}>CONTACT</button>
+          </div>
         </div>
-      </div>
+      )}
 
     </div>
-
-
-    </div>
-
   );
 }
 

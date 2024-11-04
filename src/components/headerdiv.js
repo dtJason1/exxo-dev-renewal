@@ -10,9 +10,8 @@ function SectionHeaderHeavyFirstDivBox({ param, param2, delay }) {
     return (
       <div ref={divRef} className="div5">
         <div className="section_1_div_header">
-          <h1 className="section_1_header">{param}</h1>
-          <div className="padding"></div>
-          <h1 className="section_1_header another">{param2}</h1>
+          <span className="section_1_header ">{param}</span>  <span className="section_1_header another">{param2}</span>
+
         </div>
       </div>
     );
@@ -26,9 +25,11 @@ function SectionHeaderLightFirstDivBox({ param, param2,delay }) {
     return (
       <div ref={divRef} className="div5">
         <div className="section_1_div_header">
-          <h1 className="section_1_header another">{param2}</h1>
+          <span className="section_1_header another">{param2}</span>  <span className="section_1_header">{param}</span>
+
+          {/* <h1 className="section_1_header another">{param2}</h1>
           <div className="padding"></div>
-          <h1 className="section_1_header">{param}</h1>
+          <h1 className="section_1_header">{param}</h1> */}
         </div>
       </div>
     );

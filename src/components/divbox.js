@@ -2,6 +2,8 @@ import { useEffect, useRef } from 'react';
 import image_1 from '../image/section_4_1.png';
 import image_2 from "../image/section_4_2.png";
 import { useSequentialAnimation } from '../hooks/useSequentialAnimation.ts';
+import { useMediaQuery } from 'react-responsive'
+
 function DivBox() {
   const divRef = useRef(); // TypeScript: Ref for the div element
 
@@ -46,7 +48,9 @@ function DivBox() {
 // MoonBox Component
 function MoonBox({ onAnimationEnd }) {
   const titles = ["LAMININ", "HYALURONAN", "PROCOLLAGEN", "FIBRONECTIN"];
-  const divRefs = useSequentialAnimation(titles, 200);
+  const isDesktop = useMediaQuery({ minWidth: 800 });
+  const isMobile = useMediaQuery({ maxWidth: 799 });
+  const divRefs = useSequentialAnimation(titles, 200,isMobile);
 
   useEffect(() => {
     if (divRefs.current.length === titles.length) {
@@ -64,37 +68,80 @@ function MoonBox({ onAnimationEnd }) {
   }, [onAnimationEnd, titles.length, divRefs]);
 
   return (
-    <div className="section_4_wrapper">
-      {titles.map((title, index) => (
-        <div
-          key={index}
-          ref={(el) => (divRefs.current[index] = el)}
-          className="section_4_redmoon"
-        >
-          <img className='section_4_redmoon_image' src={image_1} alt={title} />
-          <h1 className="section_4_redmoontext">{title}</h1>
+    <div>
+      {isDesktop && (
+        <div className="section_4_wrapper">
+          {titles.map((title, index) => (
+            <div
+              key={index}
+              ref={(el) => (divRefs.current[index] = el)}
+              className="section_4_redmoon"
+            >
+              <img className="section_4_redmoon_image" src={image_1} alt={title} />
+              <h1 className="section_4_redmoontext">{title}</h1>
+            </div>
+          ))}
         </div>
-      ))}
+      )}
+      
+      {isMobile && (
+        <div className="section_4_wrapper_mobile">
+          {titles.slice(0, 6).map((title, index) => (
+            <div
+              key={index}
+              ref={(el) => (divRefs.current[index] = el)}
+              className="section_4_redmoon"
+            >
+              <img className="section_4_redmoon_image" src={image_1} alt={title} />
+              <h1 className="section_4_redmoontext">{title}</h1>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
 
 function MoonBox2() {
+
+  const isDesktop = useMediaQuery({ minWidth: 800 });
+  const isMobile = useMediaQuery({ maxWidth: 799 });
+
+
   const titles = ["TGF-B", "SDF-1", "VEGF", "HGF", "BEGF", "EGF"];
-  const divRefs = useSequentialAnimation(titles, 200);
+  const divRefs = useSequentialAnimation(titles, 200, isMobile);
 
   return (
-    <div className="section_4_wrapper">
-      {titles.map((title, index) => (
-        <div
-          key={index}
-          ref={(el) => (divRefs.current[index] = el)}
-          className="section_4_redmoon"
-        >
-          <img  className='section_4_redmoon_image' src={image_2} alt={title} />
-          <h1 className="section_4_redmoontext">{title}</h1>
+    <div>
+      {isDesktop && (
+        <div className="section_4_wrapper">
+          {titles.map((title, index) => (
+            <div
+              key={index}
+              ref={(el) => (divRefs.current[index] = el)}
+              className="section_4_redmoon"
+            >
+              <img className="section_4_redmoon_image" src={image_2} alt={title} />
+              <h1 className="section_4_redmoontext">{title}</h1>
+            </div>
+          ))}
         </div>
-      ))}
+      )}
+      
+      {isMobile && (
+        <div className="section_4_wrapper_mobile">
+          {titles.slice(0, 6).map((title, index) => (
+            <div
+              key={index}
+              ref={(el) => (divRefs.current[index] = el)}
+              className="section_4_redmoon"
+            >
+              <img className="section_4_redmoon_image" src={image_2} alt={title} />
+              <h1 className="section_4_redmoontext">{title}</h1>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }

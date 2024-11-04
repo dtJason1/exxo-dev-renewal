@@ -18,17 +18,15 @@ function Sector_4({ onLogoClick }: { onLogoClick: () => void }) {
         <h1 className='section_1_header'>PATENTED 100%</h1>
           <div className='padding' > </div>
           <h1 className='section_1_header plus'>PURE GROW FACTORS</h1>
-          <div >
+          <div style={{marginTop: "2vh"}} >
 
             <MoonBox onAnimationEnd={() => setIsMoonBox1Complete(true)} />
-            {isMoonBox1Complete && <MoonBox2 />}
+            {isMoonBox1Complete && <MoonBox2  />}
+    
           </div>
-          <div className='section_2_explainclass none'>
-
+          <div style={{marginBottom: "3vh", marginTop: "3vh"}}>
           <P1DivBOX delay={1000} className='section_header content' param={"A patented effective ingredient containing approximately 270 times more 'Fibronectine', 'Pro-collagen type-l', precursor of collagen, and 'Laminin, a tissue and cell adhesive, compared to conventional culture mediums."}></P1DivBOX>
-
           </div>
-
 {/*         
         <div className='section_4_wrapper'>
 

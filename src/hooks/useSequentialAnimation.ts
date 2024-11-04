@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 
-export function useSequentialAnimation(items, delay = 200) {
+export function useSequentialAnimation(items, delay = 200, trigger) {
   const itemRefs = useRef([]);
 
   useEffect(() => {
@@ -19,16 +19,18 @@ export function useSequentialAnimation(items, delay = 200) {
       { threshold: 0.2 }
     );
 
+    // Observe each item in the array
     itemRefs.current.forEach((item) => {
       if (item) observer.observe(item);
     });
 
+    // Cleanup the observer on unmount or dependency change
     return () => {
       itemRefs.current.forEach((item) => {
         if (item) observer.unobserve(item);
       });
     };
-  }, [delay]);
+  }, [delay, trigger]); // Add `trigger` as a dependency to reinitialize
 
   return itemRefs;
 }

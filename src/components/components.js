@@ -6,7 +6,7 @@ import section_6_4 from '../image/section_6_4.png';
 
 
 function MoonBox2({ image_1, image_2 } ) {
-
+  
 
   return (
     <div className="sliderDiv">
