@@ -29,7 +29,9 @@
   color: white;
 }
 
-
+a:link { color: white; text-decoration: none;}
+a:visited { color: white; text-decoration: none;}
+a:hover { color: white; }
 
 
 .App-link {
@@ -54,9 +56,12 @@ section{
   object-fit: cover;
   min-width: 500px;
   min-height: 290px;
-  filter:brightness(0.80)
 }
+.homeimage.home{
+  filter:brightness(0.80)
 
+
+}
 
 .div1{
   z-index: 50;
@@ -255,7 +260,8 @@ p{
   font-weight: 450;
   line-height: normal;
   letter-spacing: -0.36px;
-  text-decoration-line: underline
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px; 
 }
 .section_1_wrapper{
   padding-top: 10vh;
@@ -566,7 +572,7 @@ p{
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-200vw);
+    transform: translateX(-250vw);
   }
 }
 
@@ -575,7 +581,7 @@ p{
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-420vw);
   }
 }
 
@@ -929,7 +935,7 @@ p{
 
   }
   .carousel-track{
-    animation: slide2 10s infinite linear;
+    animation: slide2 25s infinite linear;
   }
   .section_header.section_7{
     font-size: 72px;
@@ -937,7 +943,7 @@ p{
   }
 
   .contact{width: 100%; margin-left: 100px;}
-  .label{width: 8vw;}
+  .label{width: 20%;}
   .footerclass{
 
     margin-top: 2vh;
@@ -954,10 +960,13 @@ p{
 
   .section_4_redmoontext{
     font-size: 10px;
+    font-weight: 800;
   }
+  
 
   .section_4_redmoon_image{
     width: 17vw;
+    min-width: 50px;
   }
 
   .section_header.content.section_1{
@@ -975,7 +984,7 @@ p{
     margin-top: 0;
   }
   .section_1_wrapper{
-    padding-top:5vh;
+    padding-top:10vh;
   }
   section{
     height: auto;
@@ -990,5 +999,9 @@ p{
   }
   .slider_mobile{
     margin-bottom: 3vh;
+  }
+
+  .section_header.content.start{
+    font-size: 10px;
   }
 }

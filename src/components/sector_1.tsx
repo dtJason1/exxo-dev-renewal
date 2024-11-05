@@ -80,7 +80,14 @@ function Sector_1({ onLogoClick }: { onLogoClick: () => void }) {
     <Mobile>
     <section id="section" className="section_1">
         <div className="section_1_wrapper">
-          <SectionHeaderHeavyFirstDivBox param=" HYBRID EXXOSOME" param2="BLESKIN EXXO" delay={1200} ></SectionHeaderHeavyFirstDivBox>
+          <div className="div5 visible">
+          <div className="section_1_div_header visible" style={{display:"flex", flexDirection:"column"}}>
+            <span className="section_1_header "> HYBRID EXXOSOME</span>  <span className="section_1_header another">BLESKIN EXXO</span>
+
+            </div>
+          </div>
+
+
           <div className='section_1_content'>
             <div className='section_1_content_anothersecond'>
               <div className='section_1_content_second'>

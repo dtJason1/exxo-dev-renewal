@@ -11,7 +11,7 @@ function Home({ onLogoClick }: { onLogoClick: () => void }) {
     <section id="section" style={{height:"100vh"}}>
       <div className="home">
         <DivBox />
-        <img className="homeimage" src={image_1} alt="home" />
+        <img className="homeimage home" src={image_1} alt="home" />
 
       </div>
     </section>
