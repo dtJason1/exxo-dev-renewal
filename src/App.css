@@ -339,7 +339,13 @@ p{
 
 .section_1_content_first{
   min-width: 959px;
+  width:55%;
 }
+.section_1_content_first.last{
+  min-width: 959px;
+  width:100%;
+}
+
 
 
 .section_1_content_second{
@@ -539,6 +545,7 @@ p{
 .sliderDiv_img{
   width: 18vw;
   height: 36vh;
+  margin-right: 0.3vw;
 }
 .sliderDiv_img_another{
   width: 18vw;
@@ -559,7 +566,7 @@ p{
 
 .carousel-track {
   display: flex;
-  animation: slide 20s infinite linear;
+  animation: slide 40s infinite linear;
 }
 
 .carousel-item {
@@ -572,7 +579,7 @@ p{
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-250vw);
+    transform: translateX(-215vw);
   }
 }
 
@@ -581,7 +588,7 @@ p{
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-420vw);
+    transform: translateX(-385vw);
   }
 }
 
@@ -711,7 +718,10 @@ p{
     min-width: 300px;
 
   }
-
+  .section_1_content_first.last{
+    min-width: 300px;
+    width: 100%;
+  }
   h1{
     font-size: 40px;
   }
@@ -838,6 +848,10 @@ p{
 }
 
 @media(max-width: 800px){
+  .footerclass_width {
+    width: 100%;
+
+}
   h1{
     font-size: 28px;
   }
@@ -935,7 +949,7 @@ p{
 
   }
   .carousel-track{
-    animation: slide2 25s infinite linear;
+    animation: slide2 40s infinite linear;
   }
   .section_header.section_7{
     font-size: 72px;
@@ -998,7 +1012,7 @@ p{
     width: 50vw;
   }
   .slider_mobile{
-    margin-bottom: 3vh;
+    margin-bottom: 1vh;
   }
 
   .section_header.content.start{

@@ -4,9 +4,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useScrollHandler } from '../hooks/useScrollHandler.ts';
 import { useMediaQuery } from 'react-responsive'
 
-  function Header() {
-
-
+function Header() {
   const isMobile = useMediaQuery({ maxWidth: 800 });
 
   const [isVisible, setIsVisible] = useState(true);
@@ -14,11 +12,11 @@ import { useMediaQuery } from 'react-responsive'
   const [isHeightReduce, setIsHeightReduce] = useState(false);
   const headerDivRef = useRef(null);
 
-  const { setIndexAndScroll } = useScrollHandler();
+  const { touch } = useScrollHandler();
 
   function greetUser(scrollAmount) {
     const newIndex = Math.floor(scrollAmount / window.innerHeight);
-    setIndexAndScroll(newIndex);
+    touch(newIndex);
   }
   // 두 번째 섹션(Sector_1)을 관찰
   useEffect(() => {

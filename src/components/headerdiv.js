@@ -204,6 +204,8 @@ function Contact({ param, delay }) {
       </div>
       )}
       {isMobile && (
+
+        <div style={{width: "90vw"}}>
        <div className="div9" style={{ flexDirection: "column", maxWidth: "90%" }}>
        <div className="div8">
          <div className="label">
@@ -240,7 +242,7 @@ function Contact({ param, delay }) {
        </div>
        <div className="div8">
          <div className="label">
-           <h1 className="contactText">E-MAIL</h1>
+           <h1 className="contactText" style={{minInlineSize : "max-content"}}>E-MAIL</h1>
          </div>
          <input
            className="contact"
@@ -276,26 +278,9 @@ function Contact({ param, delay }) {
            <h1 className="contactText contentbutton">SUBMIT</h1>
          </button>
        </div>
-       <div className="footerclass" style={{ opacity: 1 }}>
-         <div>
-           <P1DivBOX
-             delay={1000}
-             className="section_header content start"
-             param={"306, Gasan digital 1-ro 19, Geumcheon-gu, Seoul, 08594, South Korea"}
-           ></P1DivBOX>
-           <P1DivBOX
-             delay={1000}
-             className="section_header content start"
-             param={"TEL | +82 33-747-4465-6 FAX | +82 -33-747-1133 E-MAIL | sales@daeyangmed.com"}
-           ></P1DivBOX>
-         </div>
-         <P1DivBOX
-           delay={1000}
-           className="section_header content start"
-           param={"©2023 Daeyang Medical Co., Ltd. ALL RIGHTS RESERVED"}
-         ></P1DivBOX>
-       </div>
+
      </div>
+      </div>
       )}
       {/* <Desktop>
         <div className="div9">

@@ -9,6 +9,7 @@ import Sector_4 from './components/sector_4.tsx';
 import Sector_5 from './components/sector_5.tsx';
 import Sector_6 from './components/sector_6.tsx';
 import Sector_7 from './components/sector_7.tsx';
+// import { useScrollHandler } from './hooks/useScrollHandler.ts';
 
 import GifTest from './components/components';
 import { useState, useRef, useCallback, useEffect } from 'react';

@@ -7,12 +7,10 @@ import section_1_2 from '../image/section_1_2.png';
 import section_1_3 from '../image/section_1_3.png';
 import { useMediaQuery } from 'react-responsive'
 
-import { useScrollHandler } from '../hooks/useScrollHandler.ts';
 import SectionHeaderHeavyFirstDivBox from './headerdiv.js';
 import { SectionHeaderLightFirstDivBox,P1DivBOX } from './headerdiv.js';
 
 function Sector_1({ onLogoClick }: { onLogoClick: () => void }) {
-  //useScrollHandler(onLogoClick); // 스크롤 완료 후 콜백으로 onLogoClick 실행
   const Desktop = ({ children }) => {
     const isTablet = useMediaQuery({ minWidth: 800})
     return isTablet ? children : null
