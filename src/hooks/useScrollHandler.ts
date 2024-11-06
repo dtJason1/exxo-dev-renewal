@@ -12,8 +12,12 @@ export function useScrollHandler() {
   }, []);
 
   const setIndexAndScroll = useCallback((index: number) => {
+    console.log("setIndexAndScroll", index)
     setScrollInProgress(true);
     setCurrentIndex(index);
+
+    console.log("setIndexAndScroll", index)
+
     window.scrollTo({
       top: scrollPositions[index],
       left: 0,
@@ -27,9 +31,15 @@ export function useScrollHandler() {
   const handleWindowWheel = useCallback(
     (event: WheelEvent) => {
       event.preventDefault();
-      if (scrollInProgress) return;
+      if (scrollInProgress){
+
+        return;
+
+      } 
+      console.log("scrolled currentIndex" , currentIndex)
 
       if (event.deltaY > 0 && currentIndex < scrollPositions.length - 1) {
+
         setIndexAndScroll(currentIndex + 1);
       } else if (event.deltaY < 0 && currentIndex > 0) {
         setIndexAndScroll(currentIndex - 1);
