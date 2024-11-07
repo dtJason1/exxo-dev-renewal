@@ -97,7 +97,7 @@ function Contact({ param, delay }) {
     };
 
     if (!name || !TEL || !COMPANY || !COUNTRY || !CONTENTS) {
-      throw new Error("All fields (Name, TEL, Company, Country, and Contents) must be filled.");
+      alert("All fields (Name, TEL, Company, Country, and Contents) must be filled.");
       return;
     }
     const config = { "Content-Type": "application/json" };
