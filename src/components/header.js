@@ -86,10 +86,19 @@ function Header() {
               <img src={image_1} className="logobutton" alt="Brand logo" />
             </button>
           </div>
-          <div className="div3 div_3_padding">
+          <div className="div3 div_3_padding" style={{marginLeft : "0", display : "flex", justifyContent : "center"}}>
+            <div className = "div10">
             <button className="img-button anotherbutton" onClick={() => greetUser(0)}>BRAND</button>
+            </div>
+            <div className = "div10">
+
             <button className="img-button anotherbutton" onClick={() => greetUser(window.innerHeight * 6)}>B/A</button>
+            </div>
+            <div className = "div10">
+
             <button className="img-button anotherbutton" onClick={() => greetUser(window.innerHeight * 7)}>CONTACT</button>
+            </div>
+
           </div>
         </div>
       )}

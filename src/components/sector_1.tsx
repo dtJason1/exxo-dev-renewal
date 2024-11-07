@@ -31,7 +31,7 @@ function Sector_1({ onLogoClick }: { onLogoClick: () => void }) {
               <img className="section_image" src={section_1_1} alt="home" />
             </div>
             <div className='section_1_content_anothersecond'>
-              <div className='section_1_content_second'>
+              <div className='section_1_content_second' style={{marginRight : "1vw", marginLeft:"1vw"}}>
                 <div className='section_1_imagecover'>
                   <img className="section_image none" src={section_1_2} alt="home" />
 

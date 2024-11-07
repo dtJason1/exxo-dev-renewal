@@ -86,7 +86,6 @@ function Contact({ param, delay }) {
   }, []);
 
   const submitData = async () => {
-    alert(name)
     const url = "https://exxobio.com/test.php/";
     const data = {
       c_name: name,
@@ -96,13 +95,18 @@ function Contact({ param, delay }) {
       c_country: COUNTRY,
       c_message: CONTENTS,
     };
+
+    if (!name || !TEL || !COMPANY || !COUNTRY || !CONTENTS) {
+      throw new Error("All fields (Name, TEL, Company, Country, and Contents) must be filled.");
+      return;
+    }
     const config = { "Content-Type": "application/json" };
 
     try {
       const response = await axios.post(url, data, { headers: config });
       alert(response.data.message || "Submission Successful");
     } catch (error) {
-      alert("Error submitting form.");
+      alert(error.message);
     }
   };
 
