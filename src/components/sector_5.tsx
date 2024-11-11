@@ -1,7 +1,6 @@
 import React from 'react';
 import '../App.css';
 import image_1 from '../image/section_5_1.png';
-import image_2 from "../image/exxo-hair.gif";
 import { SectionHeaderLightFirstDivBox,P1DivBOX } from './headerdiv.js';
 
 import { useScrollHandler } from '../hooks/useScrollHandler.ts';
@@ -39,7 +38,7 @@ function Sector_5({ onLogoClick }: { onLogoClick: () => void }) {
 
               </div>
               <div className='gifdivbox section_3'>
-           <img className='homeimage' src= {image_2}></img>
+           <img className='homeimage' src= "https://exxobio.com/exxo-hair.gif"></img>
 
           </div>
             </div>
@@ -71,7 +70,7 @@ function Sector_5({ onLogoClick }: { onLogoClick: () => void }) {
               <div className='div2 another'></div>
               </div>
               <div style={{width: "90%"}} className='gifdivbox section_3'>
-           <img className='homeimage' src= {image_2}></img>
+           <img className='homeimage' src= "https://exxobio.com/exxo-hair.gif"></img>
            <div style ={{marginTop:"2vh"}}>
             <P1DivBOX delay={1000} className='section_header content start' param={"No more hiding or covering up our formula addresses hair loss, promotes fuller hairstyles, and tackles scalp issues, ensuring your hair exudes vitality and confidence."}></P1DivBOX>
 

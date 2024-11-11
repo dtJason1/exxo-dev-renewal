@@ -45,7 +45,7 @@ function Sector_2() {
 
           <div className='section_2_wrapper'>
             <div className='section_2_videowrapper'>
-              <video autoPlay loop muted playsInline className='section_2_videoclass' src="https://s3-figma-videos-production-sig.figma.com/video/TEAM/1202488376770845288/0cb88b68da65eb2a5fa6e3bb7619ee276c23b5dd?Expires=1731283200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=WptEFxr~tSSHFAVINrRXrBGcrjJQrjYuSthdTMGzeSAVeCPgGAZbY2~YZLaEk-EaXCkKzePFT4QXnKfkHOPq3EWPSpxeiN9IXqqsLv4IqiA4pFxh~JrO3cy5Fwn5x4zPeYi~1JhId4xmeBrvrdUQlv5rnE07Ec9Z7but62vIPQCkW8v4m4iCZFIIf6mguacCkcGSHrBz0nzgSYkQTyskyltGoqgliZHZRQYBVVwt3qh7AMb7qefGgjRWZWZhs70eGUyKrKEJQlDbkfOJTkZe46I7X7vE9YIeg6RVheuj-~-BOQXgw8b8F5TowRJwlB4sYJBKsdkS7-wFlwbcSgfjfA__" controls ></video>
+              <video autoPlay loop muted playsInline className='section_2_videoclass' src="https://exxobio.com/exxo_media.mp4" controls ></video>
 
             </div>
             <div className='section_2_explainclass'>
@@ -67,7 +67,7 @@ function Sector_2() {
 
           <div className='section_2_wrapper'>
             <div className='section_2_videowrapper'>
-              <video autoPlay loop muted playsInline className='section_2_videoclass' src="https://s3-figma-videos-production-sig.figma.com/video/TEAM/1202488376770845288/0cb88b68da65eb2a5fa6e3bb7619ee276c23b5dd?Expires=1731283200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=WptEFxr~tSSHFAVINrRXrBGcrjJQrjYuSthdTMGzeSAVeCPgGAZbY2~YZLaEk-EaXCkKzePFT4QXnKfkHOPq3EWPSpxeiN9IXqqsLv4IqiA4pFxh~JrO3cy5Fwn5x4zPeYi~1JhId4xmeBrvrdUQlv5rnE07Ec9Z7but62vIPQCkW8v4m4iCZFIIf6mguacCkcGSHrBz0nzgSYkQTyskyltGoqgliZHZRQYBVVwt3qh7AMb7qefGgjRWZWZhs70eGUyKrKEJQlDbkfOJTkZe46I7X7vE9YIeg6RVheuj-~-BOQXgw8b8F5TowRJwlB4sYJBKsdkS7-wFlwbcSgfjfA__" controls ></video>
+              <video autoPlay loop muted playsInline className='section_2_videoclass' src="https://exxobio.com/exxo_media.mp4" controls ></video>
 
             </div>
 

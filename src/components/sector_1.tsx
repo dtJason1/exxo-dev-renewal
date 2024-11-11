@@ -2,7 +2,7 @@ import React from 'react';
 import '../App.css';
 import DivBox from './divbox';
 import '../App.css';
-import section_1_1 from '../image/section_1_1.jpg';
+import section_1_1 from '../image/section_1_1.png';
 import section_1_2 from '../image/section_1_2.png';
 import section_1_3 from '../image/section_1_3.png';
 import { useMediaQuery } from 'react-responsive'

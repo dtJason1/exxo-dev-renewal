@@ -1,7 +1,6 @@
 import React from 'react';
 import '../App.css';
 import image_1 from '../image/section_2_1.png';
-import image_2 from "../image/exxo-skin.gif";
 import { useMediaQuery } from 'react-responsive'
 
 import { useScrollHandler } from '../hooks/useScrollHandler.ts';
@@ -42,7 +41,7 @@ function Sector_3({ onLogoClick }: { onLogoClick: () => void }) {
 
               </div>
               <div className='gifdivbox section_3'>
-           <img className='homeimage' src= {image_2}></img>
+           <img className='homeimage' src= "https://exxobio.com/exxo-skin.gif"></img>
 
           </div>
             </div>
@@ -80,7 +79,7 @@ function Sector_3({ onLogoClick }: { onLogoClick: () => void }) {
               <div className='div2 another'></div>
               </div>
               <div style={{width: "90%"}} className='gifdivbox section_3'>
-           <img className='homeimage' src= {image_2}></img>
+           <img className='homeimage' src= "https://exxobio.com/exxo-skin.gif"></img>
            <div style ={{marginTop:"2vh"}}>
             <P1DivBOX delay={1000} className='section_header content start' param={"With high concentrations of adipose-derived stem cell culture and PDRN, our solution maximizes skin rejuvenation for a revitalized"}></P1DivBOX>
 

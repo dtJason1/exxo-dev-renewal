@@ -11,7 +11,9 @@ function Header() {
   const [isFadeOut, setIsFadeOut] = useState(false);
   const [isHeightReduce, setIsHeightReduce] = useState(false);
   const headerDivRef = useRef(null);
-
+  const reloadPage = () => {
+    window.location.reload();
+  };
   const { touch } = useScrollHandler();
 
   function greetUser(scrollAmount) {
@@ -62,9 +64,10 @@ function Header() {
         // Mobile Layout
         <div className="header-mobile">
           <button
-            onClick={() => greetUser(window.innerHeight * 6)}
+            onClick={reloadPage}
             className="img-button"
             id="logo"
+            disabled = {false}
           >
             <img src={image_1} className="logobutton mobile" alt="Brand logo" />
           </button>
@@ -79,25 +82,21 @@ function Header() {
             }`}
           >
             <button
-              onClick={() => greetUser(window.innerHeight * 6)}
+              onClick={reloadPage}
               className="img-button"
+              disabled = {!isFadeOut}
               id="logo"
             >
               <img src={image_1} className="logobutton" alt="Brand logo" />
             </button>
           </div>
           <div className="div3 div_3_padding" style={{marginLeft : "0", display : "flex", justifyContent : "center"}}>
-            <div className = "div10">
-            <button className="img-button anotherbutton" onClick={() => greetUser(0)}>BRAND</button>
-            </div>
-            <div className = "div10">
+          <button className="img-button anotherbutton" onClick={() => greetUser(0)}>BRAND</button>
 
-            <button className="img-button anotherbutton" onClick={() => greetUser(window.innerHeight * 6)}>B/A</button>
-            </div>
-            <div className = "div10">
+          <button className="img-button anotherbutton" onClick={() => greetUser(window.innerHeight * 3)}>EFFECT</button>
+          <button className="img-button anotherbutton" onClick={() => greetUser(window.innerHeight * 6)}>TREATMENT B/A</button>
+          <button className="img-button anotherbutton" onClick={() => greetUser(window.innerHeight * 7)}>CONTACT</button>
 
-            <button className="img-button anotherbutton" onClick={() => greetUser(window.innerHeight * 7)}>CONTACT</button>
-            </div>
 
           </div>
         </div>

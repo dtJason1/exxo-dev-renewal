@@ -1,7 +1,5 @@
 import React from 'react';
 import '../App.css';
-import image_1 from '../image/section_5_1.png';
-import image_2 from "../image/exxo-hair.gif";
 import { SectionHeaderLightFirstDivBox,P1DivBOX } from './headerdiv.js';
 import SimpleSlider from './components.js';
 import { useScrollHandler } from '../hooks/useScrollHandler.ts';
@@ -25,7 +23,8 @@ function Sector_6({ onLogoClick }: { onLogoClick: () => void }) {
 
         <SectionHeaderLightFirstDivBox delay={500} param2 ="BEFORE AND AFTER RESULTS"> </SectionHeaderLightFirstDivBox>
         <div className='section_2_explainclass section_6'>
-          <P1DivBOX delay={500} className='section_header content' param={"Discover the amazing transformation with EXXO. See the impressive before and after results!"}></P1DivBOX>
+          <P1DivBOX delay={500} className='section_header content' param={"Discover the amazing transformation with EXXO."}></P1DivBOX>
+          <P1DivBOX delay={500} className='section_header content' param={"See the impressive before and after results!"}></P1DivBOX>
 
            
           </div>
@@ -43,8 +42,9 @@ function Sector_6({ onLogoClick }: { onLogoClick: () => void }) {
       <div className="section_1_wrapper">
 
         <SectionHeaderLightFirstDivBox delay={500} param2 ="BEFORE AND AFTER RESULTS"> </SectionHeaderLightFirstDivBox>
-        <div className='section_2_explainclass section_6'>
-          <P1DivBOX delay={500} className='section_header content' param={"Discover the amazing transformation with EXXO. See the impressive before and after results!"}></P1DivBOX>
+        <div className='section_2_explainclass section_6' style={{maxWidth: "90vw"}}>
+          <P1DivBOX delay={500} className='section_header content' param={"Discover the amazing transformation with EXXO."}></P1DivBOX>
+          <P1DivBOX delay={500} className='section_header content' param={"See the impressive before and after results!"}></P1DivBOX>
 
            
           </div>
